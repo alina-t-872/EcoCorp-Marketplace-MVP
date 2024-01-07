@@ -35,6 +35,12 @@ form {
     justify-content: space-between;
     align-content: space-between;
     align-items: center;
+
+    & > .MuiButtonBase-root {
+        font-size: 4vmin !important;
+        height: fit-content;
+        width: fit-content;
+    }
 }
 
 .cardDetailContainer {
@@ -54,12 +60,6 @@ form {
     & > div {
         font-size: 4vmin;
     }
-}
-
-.MuiButtonBase-root {
-    font-size: 4vmin !important;
-    height: 10vmin;
-    width: 20vmin;
 }
 
 .MuiDivider-root {

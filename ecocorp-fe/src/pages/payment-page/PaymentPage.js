@@ -160,7 +160,7 @@ const PaymentPage = () => {
 
                     <div id="transactionOptionsContainer">
                         <Button variant="contained" color="error" size="large"> Cancel </Button>
-                        <Button variant="contained" color="success" size="large" type="submit"> Pay </Button>
+                        <Button variant="contained" color="success" size="large" type="submit"> Proceed </Button>
                     </div>
                 </div>
             </form>

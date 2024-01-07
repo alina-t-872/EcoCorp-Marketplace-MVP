@@ -1,0 +1,88 @@
+#paymentContainer {
+    width: 98.75vw;
+    height: 100vh;
+    position: relative;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+}
+
+#cardDetailsContainer {
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#transactionOptionsContainer {
+    margin: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+}
+
+.cardDetailContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: flex-start;
+    padding-bottom: 5vmin;
+    align-items: center;
+}
+
+.MuiTextField-root {
+    width: 27.5%;
+
+    & > div {
+        font-size: 4vmin;
+    }
+}
+
+.MuiButtonBase-root {
+    font-size: 4vmin !important;
+    height: 10vmin;
+    width: 20vmin;
+}
+
+.MuiDivider-root {
+    width: 100% !important;
+    border-color: black !important;
+    border-radius: 3px !important;
+    border-width: 1px !important;
+    margin-bottom: 5vmin !important;
+
+}
+
+p {
+    font-size: 4vmin;
+}
+
+@media screen and (min-aspect-ratio: 530/750) {
+    form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: auto;
+        position: relative;
+    }
+}

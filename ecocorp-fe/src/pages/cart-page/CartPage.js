@@ -129,7 +129,7 @@ function CartPage() {
             {/*TODO: Set button actions */}
             <div id="optionButtonsContainer">
                 <Button variant="contained" size="large"> Back </Button>
-                <Button variant="contained" size="large" type="submit"> Checkout </Button>
+                <Button variant="contained" size="large"> Checkout </Button>
             </div>
         </div>
     );

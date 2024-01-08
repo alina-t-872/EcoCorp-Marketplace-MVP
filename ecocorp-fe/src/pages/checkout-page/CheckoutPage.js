@@ -66,7 +66,7 @@ function CheckoutPage(){
             <form onSubmit={submitContactInformation}>
                 <div id="contactInformationContainer">
                     <div className="contactInfoSubsection">
-                        <p className="contactInfoTitle"> Contact Information </p>
+CS                        <p className="contactInfoTitle"> <b>Contact Information</b> </p>
 
                         <TextField
                             required
@@ -84,7 +84,7 @@ function CheckoutPage(){
                     </div>
 
                     <div className="contactInfoSubsection">
-                        <p className="contactInfoTitle"> Shipping address </p>
+                        <p className="contactInfoTitle"> <b>Shipping address</b> </p>
 
                         <div className="contactInfoSubcontainer">
                             <TextField
@@ -217,10 +217,8 @@ function CheckoutPage(){
                     </div>
                 </div>
 
-                <Divider orientation="vertical" sx={{border: "black", width: "1px !important"}}></Divider>
-
                 <div id="summaryContainer">
-                    <p style={{fontSize: "10vmin"}}><b>Checkout</b></p>
+                    <p style={{fontSize: "7vmin"}}><b>Checkout</b></p>
 
                     <div id="orderSummary">
                         <div className="orderDetails">

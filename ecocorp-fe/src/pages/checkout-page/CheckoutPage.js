@@ -66,7 +66,7 @@ function CheckoutPage(){
             <form onSubmit={submitContactInformation}>
                 <div id="contactInformationContainer">
                     <div className="contactInfoSubsection">
-CS                        <p className="contactInfoTitle"> <b>Contact Information</b> </p>
+                        <p className="contactInfoTitle"> <b>Contact Information</b> </p>
 
                         <TextField
                             required

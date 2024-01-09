@@ -1,0 +1,121 @@
+/* ProductPage.css */
+
+.carousel {
+    /* width: 70%;
+    max-width: 70%; */
+    height: auto;
+    padding-left: 100px;
+}
+
+.carousel-container {
+    padding-top: 5%;
+    flex-grow: 1;
+    max-width: 30%;
+}
+
+.product-page-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.information {
+    padding-top: 5%;
+    width: 40%;
+    margin-right: 7.5%;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#price {
+    font-size: 1.5em;
+}
+
+.quantity-container {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+  
+  .quantity-container button {
+    margin: 0 5px; /* Adjust the margin between buttons as needed */
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+  }
+  
+  .quantity-container span {
+    margin: 0 5px; /* Adjust the margin as needed */
+    font-size: 16px;
+  }
+
+  .add-to-cart,
+  .add-to-wishlist {
+    margin-top: 15px; /* Adjust the margin as needed */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #008CBA; /* Adjust the background color for cart button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center; /* Center the text within the button */
+    width: 200px;
+  }
+  
+  .add-to-cart img,
+  .add-to-wishlist img {
+    margin-right: 10px; /* Adjust the margin as needed */
+    height: 20px; /* Adjust the height of the icon as needed */
+  }
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 1000px) {
+    .product-page-container {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally in mobile view */
+        text-align: center; /* Center text within information container */
+    }
+
+    .carousel-container,
+    .information {
+        max-width: 80%;
+        width: 80%;
+        padding-left: 0;
+        margin: auto; 
+        font-size: 2em;
+    }
+
+    .information {
+        margin-left: 10%;
+    }
+
+    .carousel {
+        padding-left: 0;
+    }
+
+    .add-to-cart,
+  .add-to-wishlist {
+    /* padding: 15px 20px;  */
+    font-size: 30px; /* Adjust the font size for mobile */
+    width: 300px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .quantity-container button {
+    font-size: 30px;
+    width: 100px;
+    height: 60px;
+  }
+
+  .add-to-cart img,
+  .add-to-wishlist img {
+    height: 50px; 
+  }
+  .quantity-container span {
+    font-size: 30px; /* Adjust the font size for mobile */
+  }
+}

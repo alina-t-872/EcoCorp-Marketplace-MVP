@@ -53,3 +53,31 @@
   button:hover {
     background-color: #0056b3;
   }
+
+  .radio-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+  }
+  
+  .radio-label {
+    margin-right: 10px;
+    width: 100%;
+    color: #333;
+  }
+
+  .submit-button {
+    align-self: flex-end;
+    border-radius: 15px;
+  }
+
+  .paragraph {
+    font-size: medium;
+  }
+
+  .login-button {
+    margin-left: 10px;
+    border-radius: 15px;
+    font-size: small
+  }

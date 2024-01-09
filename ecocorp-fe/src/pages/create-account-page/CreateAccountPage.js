@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './CreateAccountPage.css';
 
+
+
 const CreateAccountPage = () => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
+    selectedOption: '',
   });
 
   const [isLogin, setIsLogin] = useState(false);
@@ -17,6 +20,14 @@ const CreateAccountPage = () => {
     });
   };
 
+  const handleOptionChange = (e) => {
+    setFormData({
+      ...formData,
+      selectedOption: e.target.value,
+    });
+  };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your account creation or login logic here
@@ -26,6 +37,7 @@ const CreateAccountPage = () => {
       username: '',
       email: '',
       password: '',
+      selectedOption: '',
     });
   };
 
@@ -65,8 +77,8 @@ const CreateAccountPage = () => {
           </form>
         </div>
       ) : (
-        <div style={{height: "70%"}}>
-          <h1 style={{paddingBottom: "20px"}}>Create an Account</h1>
+        <div style={{height: "70%", width: "40%"}}>
+          <h1 style={{paddingBottom: "20px", paddingLeft: "50px"}}>Create an Account</h1>
           <form onSubmit={handleSubmit}>
             <label>
               Username:
@@ -101,14 +113,35 @@ const CreateAccountPage = () => {
               />
             </label>
             <br />
-            
-            <button type="submit">Create Account</button>
+            <div className="radio-container">
+              <label className="radio-label">
+                  Individual
+              </label>
+              <input
+                    type="radio"
+                    value="Individual"
+                    checked={formData.selectedOption === 'Individual'}
+                    onChange={handleOptionChange}
+                  />
+            </div>
+            <div className="radio-container">
+              <label className="radio-label">
+                Legal Person
+              </label>
+              <input
+                  type="radio"
+                  value="LegalPerson"
+                  checked={formData.selectedOption === 'LegalPerson'}
+                  onChange={handleOptionChange}
+                />
+            </div>
+            <button className="submit-button" type="submit">Create Account</button>
           </form>
         </div>
       )}
-      <p>
+      <p className='paragraph'>
         {isLogin ? "Don't have an account? " : 'Already have an account? '}
-        <button onClick={toggleLogin}>
+        <button className='login-button' onClick={toggleLogin}>
           {isLogin ? 'Create an account' : 'Go to login'}
         </button>
       </p>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './CreateAccountPage.css';
-
+import {useNavigate} from 'react-router-dom';
 
 
 const CreateAccountPage = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -39,6 +41,7 @@ const CreateAccountPage = () => {
       password: '',
       selectedOption: '',
     });
+    navigate('/viewProducts');
   };
 
   const toggleLogin = () => {

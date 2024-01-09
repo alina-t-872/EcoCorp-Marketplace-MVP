@@ -1,5 +1,6 @@
 import React from "react";
 import "./CartPage.css"
+import {useNavigate} from 'react-router-dom';
 import {Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
 
 // TODO: API for fetching the cart list
@@ -19,6 +20,7 @@ import {Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, T
 
 // function CartPage(cartList) {}
 function CartPage() {
+    const navigate = useNavigate();
     let cartList = [
         {
             img: '../../assets/golf.png',
@@ -72,16 +74,16 @@ function CartPage() {
 
     return (
         <div id="cartPageContainer">
-            <p style={{fontSize: "8vmin", margin: "4vmin"}}> <b> Your Order </b></p>
+            <p style={{fontSize: "6vmin", margin: "4vmin", paddingBottom: "10px"}}> <b> Your Order </b></p>
 
             <TableContainer component={Paper} sx={{width: "85%"}}>
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell align="center"> <p>Item</p> </TableCell>
-                            <TableCell align="center"> <p>Price</p> </TableCell>
-                            <TableCell align="center"> <p>Quantity</p> </TableCell>
-                            <TableCell align="center"> <p>Total</p> </TableCell>
+                            <TableCell align="center"> <p style={{fontSize: "1.65rem"}}>Item</p> </TableCell>
+                            <TableCell align="center"> <p style={{fontSize: "1.65rem"}}>Price</p> </TableCell>
+                            <TableCell align="center"> <p style={{fontSize: "1.65rem"}}>Quantity</p> </TableCell>
+                            <TableCell align="center"> <p style={{fontSize: "1.65rem"}}>Total</p> </TableCell>
                         </TableRow>
                     </TableHead>
 
@@ -100,24 +102,24 @@ function CartPage() {
                                         />
 
                                         <div className="itemDetails">
-                                            <p><b>{cartItem.title}</b></p>
+                                            <p style={{fontSize: "1.45rem"}}><b>{cartItem.title}</b></p>
                                             <p style={{fontSize: "2vmin"}}> {cartItem.description} </p>
                                         </div>
                                     </span>
                                 </TableCell>
 
-                                <TableCell align="center"> <p>{cartItem.price} lei</p></TableCell>
-                                <TableCell align="center"> <p>{cartItem.quantity}</p> </TableCell>
-                                <TableCell align="center"> <p>{computeTotalForItem(cartItem)} lei</p> </TableCell>
+                                <TableCell align="center"> <p style={{fontSize: "1.25rem"}}>{cartItem.price} lei</p></TableCell>
+                                <TableCell align="center"> <p style={{fontSize: "1.25rem"}}>{cartItem.quantity}</p> </TableCell>
+                                <TableCell align="center"> <p style={{fontSize: "1.25rem"}}>{computeTotalForItem(cartItem)} lei</p> </TableCell>
                             </TableRow>
                         )}
 
                         <TableRow>
-                            <TableCell align="left"> <p><b>Subtotal <br/> Shipping <br/> Total </b></p> </TableCell>
+                            <TableCell align="left"> <p style={{fontSize: "1.25rem"}}><b>Subtotal <br/> Shipping <br/> Total </b></p> </TableCell>
                             <TableCell></TableCell>
                             <TableCell></TableCell>
                             <TableCell align="right">
-                                <p><b>
+                                <p style={{fontSize: "1.25rem"}}><b>
                                     {computeSubtotal()} lei <br/> {computeShippingFee()} lei <br/> {computeTotal()} lei
                                 </b></p>
                             </TableCell>
@@ -126,10 +128,9 @@ function CartPage() {
                 </Table>
             </TableContainer>
 
-            {/*TODO: Set button actions */}
             <div id="optionButtonsContainer">
-                <Button variant="contained" size="large"> Back </Button>
-                <Button variant="contained" size="large"> Checkout </Button>
+                <button className="button-class" onClick={() => {navigate(-1);}}> Back </button>
+                <button className="button-class" onClick={() => {navigate("/checkout");}}> Checkout </button>
             </div>
         </div>
     );

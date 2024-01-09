@@ -51,6 +51,12 @@ p {
     margin: 1vmin 0;
 }
 
+.button-class {
+    border-radius: 15px;
+    font-size: large;
+    width: 15%;
+}
+
 @media screen and (min-aspect-ratio: 530/750) {
     #cartPageContainer {
         width: 100%;

@@ -4,7 +4,7 @@ import { Container, Row, Col, Card, Form, Carousel } from 'react-bootstrap'; // 
 
 const ProfilePage = () => {
     return (
-      <Container className="mt-5">
+      <Container style={{height: "100%"}} className="mt-5">
       <Row>
         <Col md={4}>
           {/* User Info Card */}
@@ -12,8 +12,8 @@ const ProfilePage = () => {
             <Card.Img variant="top" src="https://via.placeholder.com/150" alt="User Avatar" />
             <Card.Body>
               <Card.Title>User Name</Card.Title>
-              <Card.Text>Email: user@example.com</Card.Text>
-              <Card.Text>Type of person: Natural/Legal </Card.Text>
+              <Card.Text style={{fontSize: "medium"}}>Email: user@example.com</Card.Text>
+              <Card.Text style={{fontSize: "medium"}}>Type of person: Natural/Legal </Card.Text>
             </Card.Body>
           </Card>
 
@@ -72,7 +72,7 @@ const ProfilePage = () => {
         <Col md={8} className="ps-md-5">
           {/* User Details */}
           <h2>User Profile</h2>
-          <Form>
+          <Form style={{height: "70%"}}>
             {/* Reset Username */}
             <Form.Group className="col-4 mb-4">
               <Form.Label>Reset Username</Form.Label>
@@ -115,25 +115,6 @@ const ProfilePage = () => {
             </div>
           </Form.Group>
 
-            {/*Reset Type of Person */}
-            {/* <Form.Group className="col-4 mb-4">
-              <Form.Label>Reset Type of Person</Form.Label>
-              <Form.Check
-                type="radio"
-                label="Individual"
-                name="personType"
-                id="naturalPerson"
-                defaultChecked
-              />
-              <Form.Check
-                type="radio"
-                label="Legal Person"
-                name="personType"
-                id="legalPerson"
-              />
-            </Form.Group> */}
-
-             {/*submit button for updating the profile */}
              <button type="submit" className="btn btn-primary me-5 mb-5">
              Update Profile
             </button>

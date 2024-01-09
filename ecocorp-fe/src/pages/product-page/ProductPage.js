@@ -1,92 +1,91 @@
-import React, { useState } from "react";
-import "react-rater/lib/react-rater.css";
-// import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
+import { Card, Button } from 'react-bootstrap';
 import './ProductPage.css';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 import cartIcon from '../../assets/cart.png';
 import wishlistIcon from '../../assets/wishlist.png';
+import ProductImagePreviewer from '../../fragments/ProductImagePreviewer';
 
 const ProductPage = () => {
-    const [quantity, setQuantity] = useState(1);
-    const increaseQuantity = () => {
-        setQuantity(quantity + 1);
-      };
-    
-      // Function to handle decreasing quantity, with a minimum limit of 1
-      const decreaseQuantity = () => {
-        if (quantity > 1) {
-          setQuantity(quantity - 1);
-        }
-      };
-    return (
-        
-        <div class="product-page-container">
-            <div class="carousel-container">
-            <Carousel class="carousel">
-                    <div class="image">
-                        <img class="carousel-image" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/7614/production/_105482203__105172250_gettyimages-857294664.jpg" alt="Product 1"/>
-                        <p className="legend">Legend 1</p>
-                    </div>
-                    <div class="image">
-                        <img class="carousel-image" src="https://tiermaker.com/images/templates/meme-cats-1022816/10228161621384562.jpg" alt="Product 2"/>
-                        <p className="legend">Legend 2</p>
-                    </div>
-                    <div class="image">
-                        <img class="carousel-image" src="https://tiermaker.com/images/templates/meme-cats-1022816/10228161621384562.jpg" alt="Product 3"/>
-                        <p className="legend">Legend 3</p>
-                    </div>
-                    <div class="image">
-                        <img class="carousel-image" src="https://tiermaker.com/images/templates/meme-cats-1022816/10228161621384562.jpg" alt="Product 4"/>
-                        <p className="legend">Legend 4</p>
-                    </div>
-                    <div class="image">
-                        <img class="carousel-image" src="https://tiermaker.com/images/templates/meme-cats-1022816/10228161621384562.jpg" alt="Product 5"/>
-                        <p className="legend">Legend 5</p>
-                    </div>
-                    <div class="image">
-                        <img class="carousel-image" src="https://tiermaker.com/images/templates/meme-cats-1022816/10228161621384562.jpg" alt="Product 6"/>
-                        <p className="legend">Legend 6</p>
-                    </div>
-                </Carousel>
-                </div>
-            <div className="information">
-                <h2>Product Name</h2>
-                <p id="price">Pret: 1000 RON</p>
-                <p>Vanzator: Firma</p>
-                <p>Descriere: Oua de pisica. Set de 6. Pret negociabil.</p>
-                <div className="quantity-container">
-                <button onClick={decreaseQuantity}>-</button>
-                <span>{quantity}</span>
-                <button onClick={increaseQuantity}>+</button>
-                </div>
-                <button className="add-to-cart">
-                <img src={cartIcon} alt=" Add to Cart" />
-                Adauga in Cos
-                </button><button className="add-to-wishlist" >
-                    <img src={wishlistIcon} alt="Wishlist Icon" />
-                    Adauga la Wishlist
-                </button>
-            </div>
-            
-            </div>
+  const { productId } = useParams();
+  const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
 
-            
+  useEffect(() => {
+    const placeholderProduct = {
+      name: 'Calculator hp compaq 8200 elite sff, intel pentium g850 2.90 ghz',
+      price: 177.80,
+      seller: 'IT EcoCorp PLUS SRL',
+      description: 'Calculatorul HP Compaq 8200 ELITE SFF este o alegere solidă pentru nevoile tale de bază de calcul, oferind un echilibru între performanță și funcționalitate.',
+      images: [
+        'https://itvivantshop.net/images/detailed/95/Calculator-hp-compaq-8200-elite-sff--intel-pentium-g850-2-90-ghz---4gb-ddr3--500gb-hdd--dvd--intel-hd-graphics.jpg',
+        'https://itvivantshop.net/images/detailed/95/Calculator-hp-compaq-8200-elite-sff--intel-pentium-g850-2-90-ghz---4gb-ddr3--500gb-hdd--dvd--intel-hd-graphics_5b8p-yr.jpg',
+        'https://itvivantshop.net/images/detailed/95/Calculator-hp-compaq-8200-elite-sff--intel-pentium-g850-2-90-ghz---4gb-ddr3--500gb-hdd--dvd--intel-hd-graphics_knui-au.jpg',
+        'https://itvivantshop.net/images/detailed/95/Calculator-hp-compaq-8200-elite-sff--intel-pentium-g850-2-90-ghz---4gb-ddr3--500gb-hdd--dvd--intel-hd-graphics_48u0-pv.jpg',
+        'https://itvivantshop.net/images/detailed/95/Calculator-hp-compaq-8200-elite-sff--intel-pentium-g850-2-90-ghz---4gb-ddr3--500gb-hdd--dvd--intel-hd-graphics_bni2-nh.jpg'
+      ],
+    };
 
+    const fetchProduct = () => {
+      setTimeout(() => {
+        setProduct(placeholderProduct);
+      }, 1000);
+    };
 
+    fetchProduct();
+  }, [productId]);
 
-    );
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
   };
-  
-  export default ProductPage;
 
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
-// const ProductPage = () => {
-//     return (
-//         <h1>ProductPage</h1>
-        
-//     );
-// }
+  return (
+    <div className="product-page-container">
+       {product ? (
+        <> <div>
+             <ProductImagePreviewer
+                productImages={product.images}
+            />
+          </div>
 
-// export default ProductPage;
+          <div className="information">
+            <h2>{product.name}</h2>
+            <p id="price">Pret: {product.price} RON</p>
+            <p style={{fontSize: "large"}}>Vanzator: {product.seller}</p>
+            <p style={{fontSize: "large"}}>Descriere: {product.description}</p>
+            <div className="quantity-container">
+              <button onClick={decreaseQuantity}>-</button>
+              <span>{quantity}</span>
+              <button onClick={increaseQuantity}>+</button>
+            </div>
+            <div style={{ display: 'flex', paddingTop: "20px" }}>
+                <Button onClick={() => {}} variant="primary" style={{ marginRight: '10px' }}>
+                    <img src={cartIcon} alt=" " style={{height: "1.5rem", paddingRight: "10px"}} />
+                    Add to Cart
+                </Button>
+                <Button onClick={() => {}} variant="secondary">
+                    <img src={wishlistIcon}  style={{height: "1.5rem", paddingRight: "10px"}} alt=" " />
+                    Wishlist
+                </Button>
+            </div>
+            
+          </div>
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
+  );
+};
+
+export default ProductPage;

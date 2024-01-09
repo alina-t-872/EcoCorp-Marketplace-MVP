@@ -12,7 +12,7 @@ const Menu = () => {
   return (
     <div>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">EcoCorp MarketPlace</Navbar.Brand>
+        <Navbar.Brand style={{paddingLeft: "10px"}} href="/">EcoCorp MarketPlace</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

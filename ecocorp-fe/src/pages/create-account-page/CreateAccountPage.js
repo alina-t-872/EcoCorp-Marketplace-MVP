@@ -49,7 +49,7 @@ const CreateAccountPage = () => {
     <div className="container">
       {isLogin ? (
         <div>
-          <h1>Login</h1>
+          <h1 style={{paddingBottom: "20px", paddingLeft: "100px"}}>Login</h1>
           <form onSubmit={handleSubmit}>
             <label>
               Email:
@@ -73,7 +73,7 @@ const CreateAccountPage = () => {
               />
             </label>
             <br />
-            <button type="submit">Login</button>
+            <button className="submit-button" type="submit">Login</button>
           </form>
         </div>
       ) : (

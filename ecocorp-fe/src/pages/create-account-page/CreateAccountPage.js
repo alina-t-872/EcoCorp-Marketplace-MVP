@@ -80,7 +80,7 @@ const CreateAccountPage = () => {
           </form>
         </div>
       ) : (
-        <div style={{height: "70%", width: "40%"}}>
+        <div style={{height: "70%", width: "45%"}}>
           <h1 style={{paddingBottom: "20px", paddingLeft: "50px"}}>Create an Account</h1>
           <form onSubmit={handleSubmit}>
             <label>

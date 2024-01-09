@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<CreateAccountPage />}/>
         <Route exact path="/viewProducts" element={<HomePage />}/>
-        {/* <Route exact path="/cart" element={<CartPage />}/> */}
+        <Route exact path="/cart" element={<CartPage />}/>
         <Route exact path="/checkout" element={<CheckoutPage />}/>
         <Route exact path="/payment" element={<PaymentPage />}/>
         <Route exact path="/profile" element={<ProfilePage />}/>

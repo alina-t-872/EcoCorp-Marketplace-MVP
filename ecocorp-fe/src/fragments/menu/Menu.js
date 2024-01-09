@@ -1,9 +1,13 @@
 // Menu.js
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-
+import { IconButton } from "rsuite";
+import "rsuite/dist/rsuite.min.css"; 
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import {useNavigate} from 'react-router-dom';
 
 const Menu = () => {
+  const navigate = useNavigate();
   const aboutUrl = "https://dutualincalin.github.io/EcoCorp-Marketplace/#/fiki";
   return (
     <div>
@@ -18,8 +22,10 @@ const Menu = () => {
             <Nav.Link href="/profile">Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <button style={{marginRight: "20px"}} onClick={() => {navigate('/cart');}}>
+            <ShoppingCartIcon style={{alignSelf: "flex-end"}}/>
+        </button> 
       </Navbar>
-      {/* Other content for your page */}
     </div>
   );
 };

@@ -34,7 +34,7 @@ const CreateAccountPage = () => {
   };
 
   return (
-    <div className="App">
+    <div className="container">
       {isLogin ? (
         <div>
           <h1>Login</h1>
@@ -65,8 +65,8 @@ const CreateAccountPage = () => {
           </form>
         </div>
       ) : (
-        <div>
-          <h1>Create an Account</h1>
+        <div style={{height: "70%"}}>
+          <h1 style={{paddingBottom: "20px"}}>Create an Account</h1>
           <form onSubmit={handleSubmit}>
             <label>
               Username:
@@ -101,6 +101,7 @@ const CreateAccountPage = () => {
               />
             </label>
             <br />
+            
             <button type="submit">Create Account</button>
           </form>
         </div>

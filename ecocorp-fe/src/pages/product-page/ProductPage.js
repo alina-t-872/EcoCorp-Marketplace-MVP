@@ -8,7 +8,6 @@ import './ProductPage.css';
 import cartIcon from '../../assets/cart.png';
 import wishlistIcon from '../../assets/wishlist.png';
 
-
 const ProductPage = () => {
     const [quantity, setQuantity] = useState(1);
     const increaseQuantity = () => {

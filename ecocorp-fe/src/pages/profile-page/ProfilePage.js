@@ -116,11 +116,11 @@ const ProfilePage = () => {
           </Form.Group>
 
             {/*Reset Type of Person */}
-            <Form.Group className="col-4 mb-4">
+            {/* <Form.Group className="col-4 mb-4">
               <Form.Label>Reset Type of Person</Form.Label>
               <Form.Check
                 type="radio"
-                label="Natural Person"
+                label="Individual"
                 name="personType"
                 id="naturalPerson"
                 defaultChecked
@@ -131,7 +131,7 @@ const ProfilePage = () => {
                 name="personType"
                 id="legalPerson"
               />
-            </Form.Group>
+            </Form.Group> */}
 
              {/*submit button for updating the profile */}
              <button type="submit" className="btn btn-primary me-5 mb-5">

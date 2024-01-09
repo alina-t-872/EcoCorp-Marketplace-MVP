@@ -1,6 +1,7 @@
 import React from "react";
 import "./CartPage.css"
 import {Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
+import golfImage from '../../assets/golf.jpeg';
 
 // TODO: API for fetching the cart list
 // async function fetchCartList() {
@@ -21,28 +22,28 @@ import {Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, T
 function CartPage() {
     let cartList = [
         {
-            img: "./golf.jpeg",
+            img: golfImage,
             title: "Golf 4",
             description: "Vand om",
             quantity: 4,
             price: 20.00,
         },
         {
-            img: "./golf.jpeg",
+            img: golfImage,
             title: "Golf 4",
             description: "Vand om",
             quantity: 1,
             price: 20.00,
         },
         {
-            img: "./golf.jpeg",
+            img: golfImage,
             title: "Golf 4",
             description: "Vand om",
             quantity: 1,
             price: 20.00,
         },
         {
-            img: "./golf.jpeg",
+            img: golfImage,
             title: "Golf 4",
             description: "Vand om",
             quantity: 1,
@@ -94,7 +95,7 @@ function CartPage() {
                                 <TableCell>
                                     <span className="itemPresentation">
                                         <img
-                                            src={require("./golf.jpeg")}
+                                            src={require(golfImage)}
                                             alt={cartItem.title}
                                             className="imageItem"
                                         />

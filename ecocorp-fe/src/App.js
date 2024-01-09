@@ -1,5 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Menu from './fragments/menu/Menu';
 import CreateAccountPage from './pages/create-account-page/CreateAccountPage';
 import HomePage from './pages/home-page/HomePage';
 import CartPage from './pages/cart-page/CartPage';
@@ -10,6 +12,7 @@ import ProfilePage from './pages/profile-page/ProfilePage';
 function App() {
   return (
     <Router>
+      < Menu/>
       <Routes>
         <Route exact path="/" element={<CreateAccountPage />}/>
         <Route exact path="/viewProducts" element={<HomePage />}/>
@@ -19,6 +22,7 @@ function App() {
         <Route exact path="/profile" element={<ProfilePage />}/>
       </Routes>
     </Router>
+
   );
 }
 

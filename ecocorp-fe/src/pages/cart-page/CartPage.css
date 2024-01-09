@@ -1,0 +1,63 @@
+#cartPageContainer {
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemPresentation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 100%
+}
+
+.imageItem {
+    width: 15vmin;
+    height: 15vmin;
+}
+
+#optionButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 10%;
+    width: 75%;
+    margin: 5%;
+
+    & > .MuiButtonBase-root {
+        font-size: 3vmin !important;
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+p {
+    font-size: 3vmin;
+    margin: 1vmin 0;
+}
+
+@media screen and (min-aspect-ratio: 530/750) {
+    #cartPageContainer {
+        width: 100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

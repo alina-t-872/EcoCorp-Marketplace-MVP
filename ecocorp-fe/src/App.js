@@ -15,7 +15,7 @@ function App() {
   return (
     <Router basename="/EcoCorp-Marketplace-MVP/#">
       <Menu/>
-      {/* <Routes> */}
+      <Routes>
         <Route path="/" element={<CreateAccountPage />}/>
         <Route path="/viewProducts" element={<HomePage />}/>
         <Route path="/cart" element={<CartPage />}/>
@@ -24,7 +24,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />}/>
         <Route path="/products/:id" element={<ProductPage />}/>
         <Route path="/confirmation" element={<ConfirmationPage />}/>
-      {/* </Routes> */}
+      </Routes>
     </Router>
 
   );

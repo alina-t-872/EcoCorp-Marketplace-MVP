@@ -13,7 +13,7 @@ import ConfirmationPage from './pages/confirmation-page/ConfirmationPage';
 
 function App() {
   return (
-    <Router basename="/EcoCorp-Marketplace-MVP/#">
+    <Router>
       <Menu/>
       <Routes>
         <Route path="/" element={<CreateAccountPage />}/>

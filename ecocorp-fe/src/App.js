@@ -16,14 +16,14 @@ function App() {
     <Router>
       <Menu/>
       <Routes>
-        <Route exact path="/" element={<CreateAccountPage />}/>
-        <Route exact path="/viewProducts" element={<HomePage />}/>
-        <Route exact path="/cart" element={<CartPage />}/>
-        <Route exact path="/checkout" element={<CheckoutPage />}/>
-        <Route exact path="/payment" element={<PaymentPage />}/>
-        <Route exact path="/profile" element={<ProfilePage />}/>
-        <Route exact path="/products/:id" element={<ProductPage />}/>
-        <Route exact path="/confirmation" element={<ConfirmationPage />}/>
+        <Route exact path="/EcoCorp-Marketplace-MVP" element={<CreateAccountPage />}/>
+        <Route exact path="/EcoCorp-Marketplace-MVP/viewProducts" element={<HomePage />}/>
+        <Route exact path="/EcoCorp-Marketplace-MVP/cart" element={<CartPage />}/>
+        <Route exact path="/EcoCorp-Marketplace-MVP/checkout" element={<CheckoutPage />}/>
+        <Route exact path="/EcoCorp-Marketplace-MVP/payment" element={<PaymentPage />}/>
+        <Route exact path="/EcoCorp-Marketplace-MVP/profile" element={<ProfilePage />}/>
+        <Route exact path="/EcoCorp-Marketplace-MVP/products/:id" element={<ProductPage />}/>
+        <Route exact path="/EcoCorp-Marketplace-MVP/confirmation" element={<ConfirmationPage />}/>
       </Routes>
     </Router>
 

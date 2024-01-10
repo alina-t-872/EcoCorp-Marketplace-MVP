@@ -1,4 +1,3 @@
-// ProductCard.js
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -8,8 +7,8 @@ import wishlistIcon from '../assets/wishlist.png';
 const ProductCard = ({ product }) => {
   return (
     <Card style={{ width: '20rem', margin: '20px' }}>
-      <Link style={{color: "black"}} to={`/products/${product.id}`}>
-        <Card.Img variant="top" src={product.image} alt={product.title} />
+      <Link style={{color: "black"}} to={ `/products/${product.id}`}>
+        <Card.Img style={{ paddingLeft: '10px',height: '300px'}} variant="top" src={product.image} alt={product.title}  />
       </Link>
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>

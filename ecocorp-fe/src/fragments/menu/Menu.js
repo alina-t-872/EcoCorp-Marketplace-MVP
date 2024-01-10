@@ -1,4 +1,3 @@
-// Menu.js
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { IconButton } from "rsuite";

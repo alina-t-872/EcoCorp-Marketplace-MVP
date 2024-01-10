@@ -4,13 +4,14 @@ const ProductImagePreviewer = ({ productImages }) => {
   const [selectedImage, setSelectedImage] = useState(productImages[0]);
 
   const handleImageClick = (image) => {
-    setSelectedImage(image);
+    const updatedImage = `${image}?${Date.now()}`;
+    setSelectedImage(updatedImage);
   };
 
   return (
     <div>
       <div style={{ marginBottom: '10px' }}>
-        <img src={selectedImage} alt="Product Preview" style={{ maxWidth: '60%', marginLeft: '15%' }} />
+        <img src={selectedImage} alt="Product Preview" style={{ maxWidth: '60%', marginLeft: '15%', minHeight: "200px", alignSelf: 'center', minWidth: '600px'}} />
       </div>
 
       <div style={{marginLeft: '30%'}}>

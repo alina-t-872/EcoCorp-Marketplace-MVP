@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/EcoCorp-Marketplace-MVP/static/css/main.b20761a7.css",
-    "main.js": "/EcoCorp-Marketplace-MVP/static/js/main.328ed11b.js",
+    "main.js": "/EcoCorp-Marketplace-MVP/static/js/main.5c7ccb6b.js",
     "static/js/787.20bb226d.chunk.js": "/EcoCorp-Marketplace-MVP/static/js/787.20bb226d.chunk.js",
     "static/media/bootstrap-icons.woff?": "/EcoCorp-Marketplace-MVP/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/EcoCorp-Marketplace-MVP/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/EcoCorp-Marketplace-MVP/index.html",
     "main.b20761a7.css.map": "/EcoCorp-Marketplace-MVP/static/css/main.b20761a7.css.map",
-    "main.328ed11b.js.map": "/EcoCorp-Marketplace-MVP/static/js/main.328ed11b.js.map",
+    "main.5c7ccb6b.js.map": "/EcoCorp-Marketplace-MVP/static/js/main.5c7ccb6b.js.map",
     "787.20bb226d.chunk.js.map": "/EcoCorp-Marketplace-MVP/static/js/787.20bb226d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b20761a7.css",
-    "static/js/main.328ed11b.js"
+    "static/js/main.5c7ccb6b.js"
   ]
 }

@@ -11,17 +11,17 @@ const Menu = () => {
   return (
     <div>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand style={{paddingLeft: "10px"}} href="/">EcoCorp MarketPlace</Navbar.Brand>
+        <Navbar.Brand style={{paddingLeft: "10px"}} href="/EcoCorp-Marketplace-MVP/#/">EcoCorp MarketPlace</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/viewProducts">Home</Nav.Link>
+            <Nav.Link href="/EcoCorp-Marketplace-MVP/#/viewProducts">Home</Nav.Link>
             <Nav.Link href={aboutUrl}>About</Nav.Link>
             {/* <Nav.Link href="#">Contact</Nav.Link> */}
-            <Nav.Link href="/profile">Profile</Nav.Link>
+            <Nav.Link href="/EcoCorp-Marketplace-MVP/#/profile">Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <button style={{marginRight: "20px"}} onClick={() => {navigate('/cart');}}>
+        <button style={{marginRight: "20px"}} onClick={() => {navigate('/EcoCorp-Marketplace-MVP/#/cart');}}>
             <ShoppingCartIcon style={{alignSelf: "flex-end"}}/>
         </button> 
       </Navbar>

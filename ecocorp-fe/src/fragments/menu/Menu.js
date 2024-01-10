@@ -16,7 +16,7 @@ const Menu = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/viewProducts">Home</Nav.Link>
-            <Nav.Link href={aboutUrl}>About</Nav.Link>
+            {/* <Nav.Link href={aboutUrl}>About</Nav.Link> */}
             {/* <Nav.Link href="#">Contact</Nav.Link> */}
             <Nav.Link href="/profile">Profile</Nav.Link>
           </Nav>

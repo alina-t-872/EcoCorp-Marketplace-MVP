@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter  as Router, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './fragments/menu/Menu';
 import CreateAccountPage from './pages/create-account-page/CreateAccountPage';
@@ -13,9 +13,9 @@ import ConfirmationPage from './pages/confirmation-page/ConfirmationPage';
 
 function App() {
   return (
-    <Router basename="/EcoCorp-Marketplace-MVP">
+    <Router basename="/EcoCorp-Marketplace-MVP/#">
       <Menu/>
-      <Routes>
+      {/* <Routes> */}
         <Route path="/" element={<CreateAccountPage />}/>
         <Route path="/viewProducts" element={<HomePage />}/>
         <Route path="/cart" element={<CartPage />}/>
@@ -24,7 +24,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />}/>
         <Route path="/products/:id" element={<ProductPage />}/>
         <Route path="/confirmation" element={<ConfirmationPage />}/>
-      </Routes>
+      {/* </Routes> */}
     </Router>
 
   );

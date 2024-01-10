@@ -13,17 +13,17 @@ import ConfirmationPage from './pages/confirmation-page/ConfirmationPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/EcoCorp-Marketplace-MVP">
       <Menu/>
       <Routes>
-        <Route exact path="/EcoCorp-Marketplace-MVP" element={<CreateAccountPage />}/>
-        <Route exact path="/EcoCorp-Marketplace-MVP/viewProducts" element={<HomePage />}/>
-        <Route exact path="/EcoCorp-Marketplace-MVP/cart" element={<CartPage />}/>
-        <Route exact path="/EcoCorp-Marketplace-MVP/checkout" element={<CheckoutPage />}/>
-        <Route exact path="/EcoCorp-Marketplace-MVP/payment" element={<PaymentPage />}/>
-        <Route exact path="/EcoCorp-Marketplace-MVP/profile" element={<ProfilePage />}/>
-        <Route exact path="/EcoCorp-Marketplace-MVP/products/:id" element={<ProductPage />}/>
-        <Route exact path="/EcoCorp-Marketplace-MVP/confirmation" element={<ConfirmationPage />}/>
+        <Route path="/" element={<CreateAccountPage />}/>
+        <Route path="/viewProducts" element={<HomePage />}/>
+        <Route path="/cart" element={<CartPage />}/>
+        <Route path="/checkout" element={<CheckoutPage />}/>
+        <Route path="/payment" element={<PaymentPage />}/>
+        <Route path="/profile" element={<ProfilePage />}/>
+        <Route path="/products/:id" element={<ProductPage />}/>
+        <Route path="/confirmation" element={<ConfirmationPage />}/>
       </Routes>
     </Router>
 

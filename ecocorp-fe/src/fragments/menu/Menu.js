@@ -21,7 +21,7 @@ const Menu = () => {
             <Nav.Link href="/EcoCorp-Marketplace-MVP/#/profile">Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <button style={{marginRight: "20px"}} onClick={() => {navigate('/EcoCorp-Marketplace-MVP/#/cart');}}>
+        <button style={{marginRight: "20px"}} onClick={() => {navigate('/cart');}}>
             <ShoppingCartIcon style={{alignSelf: "flex-end"}}/>
         </button> 
       </Navbar>

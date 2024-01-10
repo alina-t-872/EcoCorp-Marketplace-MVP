@@ -9,11 +9,12 @@ import CheckoutPage from './pages/checkout-page/CheckoutPage';
 import PaymentPage from './pages/payment-page/PaymentPage';
 import ProfilePage from './pages/profile-page/ProfilePage';
 import ProductPage from './pages/product-page/ProductPage';
+import ConfirmationPage from './pages/confirmation-page/ConfirmationPage';
 
 function App() {
   return (
     <Router>
-      < Menu/>
+      <Menu/>
       <Routes>
         <Route exact path="/" element={<CreateAccountPage />}/>
         <Route exact path="/viewProducts" element={<HomePage />}/>
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/payment" element={<PaymentPage />}/>
         <Route exact path="/profile" element={<ProfilePage />}/>
         <Route exact path="/products/:id" element={<ProductPage />}/>
+        <Route exact path="/confirmation" element={<ConfirmationPage />}/>
       </Routes>
     </Router>
 
